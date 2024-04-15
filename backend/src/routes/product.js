@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
         let products = await Product.find();
         res.status(200).json(products);
-        console.log(products)
+        // console.log(products)
     } catch (error) {
         res.status(500).json({ error: 'Erro ao buscar produtos do banco de dados.' });
     }
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         let products = new Product(req.body);
         await products.save()
         res.status(201).json(products)
-        console.log(products)
+        // console.log(products)
     } catch (error) {
         res.status(500).json({ error: 'Erro ao adiconar produto ao banco de dados.' })
     }

@@ -20,9 +20,6 @@ app.set('view engine', 'ejs');
 app.use('/', rootRouter);
 app.use('/products', productRouter);
 
-app.get("/api", (req, res) => {
-    res.json({ "products": ["productOne", "productTwo", "productThree"] })
-})
 
 
 app.listen(5000, () => {
